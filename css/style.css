@@ -8,22 +8,63 @@ body {
 	flex-direction: column;
     background: #d9d9d9  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to bottom, #b3e6cc, #b3e6cc, #d9d9d9, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #b3e6cc, #b3e6cc, #d9d9d9, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to bottom, #ffffff, #d9d9d9, #d9d9d9, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #000000;
     font-family: sans-serif;
 }
 header {
-	background: linear-gradient(to top, #b3e6cc, #b3e6cc, #d9d9d9, #ffffff);
-	color: #0000ff;
-	font-family: sans-serif;
-	height: 30px;
+	background: #000000;
+	color: #000000;
+	font-family: OCR A Std;
+	height: 60px;
+	text-shadow: 1px 1px 8px white;
 }
 main {
 	margin: 0 auto;
 	flex: 1 0 auto; /*flex-grow, flex-shrink, flex-basis*/
-}	
+}
 
-.inputNumber {
+
+.calosc{
+	position: relative;
+	width:  310px;
+	height: 190px;
+	transition: all 0.5s;
+}
+.miniaturka {
+	width: 300px;
+	height: auto;
+	transition: all 0.5s;
+	border: 5px solid #eee;
+	border-radius: 4px
+
+}
+.miniaturka:hover {
+	filter: blur(2px);
+	transform: scale(0.9,0.9) rotate(5deg);
+	transition: all 0.5s;
+}
+.play {
+
+	display:none;
+	text-align:center;
+	transition: all 0.5s;
+	webkit-transition-timing-function: ease-in;
+	}
+.play:hover .miniaturka {
+		transition: all 0.5s;
+}
+.calosc:hover .play{
+	display:block;
+	top: 36%;
+	text-align: center;
+	position: absolute;
+	transition: all 0.5s;
+	transform: scale(1.1,1.1) rotate(-3deg);
+
+	}
+	
+	.inputNumber {
     font-size: 16px;
     border-radius: 2px;
     border: solid 2px;
@@ -35,13 +76,15 @@ main {
     border: solid 2px;
     padding: 3px;
     background-color: #f8f8f8;
-    transition: all 1s;
+    transition: all 5s transform linear;
 }
 .spr:hover {
     cursor: pointer;
 	color: #FFFFFF;
+	filter: blur(1px);
     background-color: #000000;
 }
+
 .footer {
 	background-color: #ffffff;
 	color: #000000;
